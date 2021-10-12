@@ -122,10 +122,11 @@ export function GeoJSONLoader(data, control) {
 			// Extended GeoJSON
 			layer._latlngs.forEach((point, i, data) => {
 				// same properties as L.GPX layer
-				point.meta = { time: null, ele: null, hr: null, cad: null, atemp: null };
+				point.meta = { time: null, ele: null, hr: null, cad: null, atemp: null, speed: null };
 				if("alt" in point) point.meta.ele = point.alt;
 				if(feature.properties) {
 					let prop = feature.properties;
+					if ("speeds" in prop) point.meta.speed = prop.speeds[i];
 					if("coordTimes" in prop) point.meta.time = new Date(Date.parse(prop.coordTimes[i]));
 					else if("times" in prop) point.meta.time = new Date(Date.parse(prop.times[i]));
 					else if("time" in prop) point.meta.time = new Date(Date.parse((typeof prop.time === 'object' ? prop.time[i] : prop.time)));
