@@ -55,7 +55,7 @@ Elevation.addInitHook(function () {
     let sAvg = track.speed_avg || 0; // Speed Avg
     let speed = 0;
 
-    if (e.point.meta && e.point.meta.speed) speed = e.point.meta.speed;
+    if (e.point.meta && e.point.meta.speed !== undefined) speed = e.point.meta == null ? 0 :e.point.meta.speed;
     else if (deltaT > 0) {
       let delta = (data[i].dist - data[i > 0 ? i - 1 : i].dist) * 1000;
       speed = Math.abs((delta / deltaT) * this._timeFactor) * this._speedFactor;
