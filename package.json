@@ -1,9 +1,12 @@
 {
-	"name": "@raruto/leaflet-elevation",
-	"version": "1.7.0",
+	"name": "@fidera/leaflet-elevation",
+	"version": "2.0.0",
 	"description": "A Leaflet plugin that allows to add elevation profiles using d3js",
 	"main": "dist/leaflet-elevation.min.js",
 	"module": "src/index.js",
+	"publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "rollup -c build/rollup.config.js",
@@ -13,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Raruto/leaflet-elevation.git"
+		"url": "https://github.com/fidera/leaflet-elevation.git"
 	},
 	"keywords": [
 		"leaflet",
@@ -26,7 +29,7 @@
 		"gps-visualizer"
 	],
 	"author": {
-		"name": "Felix “MrMufflon” Bache",
+		"name": "Felix “MrMufflon” Bache, Fidera Oy",
 		"url": "https: //github.com/MrMufflon/Leaflet.Elevation"
 	},
 	"contributors": [
