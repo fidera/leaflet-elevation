@@ -1,5 +1,7 @@
 # leaflet-elevation.js
 
+Please note that this is a custom fork and all the documentation below is related to the original fork.
+
 [![NPM version](https://img.shields.io/npm/v/@raruto/leaflet-elevation.svg?color=red)](https://www.npmjs.com/package/@raruto/leaflet-elevation)
 [![License](https://img.shields.io/badge/license-GPL%203-blue.svg?style=flat)](LICENSE)
 
