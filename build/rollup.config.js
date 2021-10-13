@@ -8,7 +8,7 @@ import rollupGitVersion from 'rollup-plugin-git-version';
 import babel from '@rollup/plugin-babel';
 
 let plugin = require('../package.json');
-let plugin_name = plugin.name.replace("@raruto/", "");
+let plugin_name = plugin.name.replace("@fidera/", "");
 
 let input = plugin.module;
 let output = {
@@ -16,7 +16,6 @@ let output = {
 	format: "umd",
 	sourcemap: true,
 	name: plugin_name,
-
 };
 
 let plugins = [
